@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Try positioning
+        </title>
+        <style>
+            div {
+                margin: 10px;
+                padding: 10px;
+                border : 2px solid black;
+            }
+            .relative {
+                position: relative;
+                top : 30px;
+                left : 50px;
+            }
+            .absolute {
+                position: absolute;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div>
+            I am the first div
+            <div class="relative">I am the 2nd div</div>
+            <div>I am the 3rddiv</div>
+        </div>
+        
+        <div class="absolute">I am the 5th div
+            <div class="absolute">I am the 4th div</div>
+        </div>
+        <div>
+            I am the 6th div
+            <div>
+                I am the 7th div
+                <div class="relative">I am the 8th div</div>
+            </div>
+        </div>
+        <div>I am the 9th div</div>
+        <div>I am the 10th div</div>
+        <div>I am the 11th div</div>
+        <div>I am the 12th div</div>
+
+        <script>
+            let divs = document.getElementsByTagName('div');
+            setInterval(function(){
+                for (let i=0; i<divs.length; i++) {
+                    divs[i].style.backgroundColor = 'rgb(' + Math.random()*200 + ','+  Math.random()*200 + ','+  Math.random()*200 + ')';
+                    // divs[i].style.transform = 'rotate(' + Math.random()*100+ 'deg)'
+                }
+            }, 5000)
+            
+        </script>
+    </body>
+</html>

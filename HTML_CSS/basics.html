@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Doctype is a meta keyword which tells the browser that the resource we are serving is HTML,
+previously the doctype syntax was a bit complicated denoting different HTML/dtd?? versions supported -->
+<html lang="en">
+    <head><!-- everything that is part of the page but not content meaning displayble. like resources css etc -->
+        <meta charset="utf-8"> <!-- this defines characterset for our html document, meaning the charset it can identify,
+        utf-8 has all the chars known to human  -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+
+        </title>
+        <style>
+            @media screen and (max-width: 600px) {
+                body {
+                    background-color: red;
+                }
+            }
+
+            @media screen and (min-width: 1000px) {
+                body {
+                    background-color: green;
+                }
+            }
+
+            @media only screen and (min-width:650px) {
+                body {
+                    background-color: yellow;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <p> I am block level</p>
+        <span>I am inline</span><span>I am inline</span>
+    </body>
+</html>
