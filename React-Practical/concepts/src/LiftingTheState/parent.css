@@ -1,0 +1,11 @@
+.outerBorder {
+    border: 5px solid seagreen;
+}
+.innerPadding {
+    text-align: center;
+    padding: 5px;
+    margin: 15px;
+}
+.hover {
+    background-color: violet;
+}
